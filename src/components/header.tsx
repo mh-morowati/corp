@@ -1,14 +1,17 @@
 import Link from "next/link";
 
 function Header() {
-    return ( <div>
-        <div>
-          <Link href={'/'}>home</Link>
-          <Link href={'/performance'}>performance</Link>
-          <Link href={'/reliability'}>reliability</Link>
-          <Link href={'/scale'}>scale</Link>
+  return (
+    <div className="w-full absolute text-white z-10">
+      <nav className="container relative flex flex-wrap items-center justify-between mx-auto p-8">
+        <Link className=" text-3xl" href={'/'}>Home</Link>
+        <div className="space-x-4 text-xl">
+          <Link href={'/performance'}>Performance</Link>
+          <Link href={'/reliability'}>Reliability</Link>
+          <Link href={'/scale'}>Scale</Link>
         </div>
-    </div> );
+      </nav>
+    </div>);
 }
 
 export default Header;
